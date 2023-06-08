@@ -1,35 +1,38 @@
-import React, { useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper";
+import React from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
+import banner1 from "../../../../public/banner/banner (1).jpeg"
+import banner2 from "../../../../public/banner/banner (1).jpg"
+import banner3 from "../../../../public/banner/banner (2).jpg"
+import banner4 from "../../../../public/banner/banner (3).jpg"
+import banner5 from "../../../../public/banner/banner (4).jpg"
+import banner6 from "../../../../public/banner/banner (5).jpg"
 const Banner = () => {
+
     return (
-        <>
-            <Swiper
-                spaceBetween={30}
-                centeredSlides={true}
-                autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                }}
-                pagination={{
-                    clickable: true,
-                }}
-                navigation={true}
-                modules={[Autoplay, Pagination, Navigation]}
-                className="mySwiper"
-            >
-                <SwiperSlide>Slide 1</SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 5</SwiperSlide>
-                <SwiperSlide>Slide 6</SwiperSlide>
-                <SwiperSlide>Slide 7</SwiperSlide>
-                <SwiperSlide>Slide 8</SwiperSlide>
-                <SwiperSlide>Slide 9</SwiperSlide>
-            </Swiper>
-        </>
+        <div className='container mx-auto mt-0'>
+            <Carousel>
+                <div className='absolute'>
+                    <img src={banner1} />
+                </div>
+                <div>
+                    <img src={banner2} />
+                </div>
+                <div>
+                    <img src={banner3} />
+                </div>
+                <div>
+                    <img src={banner4} />
+                </div>
+                <div>
+                    <img src={banner5} />
+                </div>
+                <div>
+                    <img src={banner6} />
+                </div>
+            </Carousel>
+        </div>
     );
 };
 
