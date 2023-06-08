@@ -14,7 +14,7 @@ const Navbar = () => {
     const LogIn =
         <>
             <div>
-                <a><Link>Login</Link></a>
+                <a><Link to="/login">Login</Link></a>
             </div>
         </>
     return (
