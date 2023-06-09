@@ -1,0 +1,106 @@
+[
+    {
+      "image": "https://i.ibb.co/3FXFp47/karate.jpg",
+      "courseName": "Karate",
+      "instructorName": "John Smith",
+      "totalSeats": 20,
+      "availableSeats": 15,
+      "price": "99"
+    },
+    {
+      "image": "https://i.ibb.co/vvMqqFT/What-is-the-order-of-belts-in-Taekwondo.jpg",
+      "courseName": "Taekwondo",
+      "instructorName": "Jane Doe",
+      "totalSeats": 15,
+      "availableSeats": 5,
+      "price": "79"
+    },
+    {
+      "image": "https://i.ibb.co/kSdVzHr/judo.jpg",
+      "courseName": "Judo",
+      "instructorName": "David Johnson",
+      "totalSeats": 10,
+      "availableSeats": 2,
+      "price": "89"
+    },
+    {
+      "image": "https://i.ibb.co/KWr2Hw8/kids-jiu-jitsu-1.jpg",
+      "courseName": "Brazilian Jiu-Jitsu",
+      "instructorName": "Emily Wilson",
+      "totalSeats": 12,
+      "availableSeats": 10,
+      "price": "109"
+    },
+    {
+      "image": "https://i.ibb.co/G2V1LcW/1.png",
+      "courseName": "Muay Thai",
+      "instructorName": "Michael Anderson",
+      "totalSeats": 18,
+      "availableSeats": 10,
+      "price": "119"
+    },
+    {
+      "image": "https://i.ibb.co/wQQKWJn/110124-kungfu-cropped.jpg",
+      "courseName": "Kung Fu",
+      "instructorName": "Lisa Chen",
+      "totalSeats": 25,
+      "availableSeats": 20,
+      "price": "99"
+    },
+    {
+      "image": "https://i.ibb.co/gMFMjd1/istockphoto-1213024033-612x612.jpg",
+      "courseName": "Boxing",
+      "instructorName": "James Wilson",
+      "totalSeats": 15,
+      "availableSeats": 5,
+      "price": "89"
+    },
+    {
+      "image": "https://i.ibb.co/LrSz4y8/kickboksen-kids-1.jpg",
+      "courseName": "Kickboxing",
+      "instructorName": "Sarah Thompson",
+      "totalSeats": 20,
+      "availableSeats": 18,
+      "price": "109"
+    },
+    {
+      "image": "https://i.ibb.co/smjmq3m/kravmaga-kids-360-defense.jpg",
+      "courseName": "Krav Maga",
+      "instructorName": "Daniel Lee",
+      "totalSeats": 15,
+      "availableSeats": 12,
+      "price": "129"
+    },
+    {
+      "image": "https://i.ibb.co/LtwmjXW/istockphoto-1331832897-612x612.jpg",
+      "courseName": "Capoeira",
+      "instructorName": "Camila Oliveira",
+      "totalSeats": 20,
+      "availableSeats": 20,
+      "price": "99"
+    },
+    {
+      "image": "https://i.ibb.co/qkB7Lj4/istockphoto-513252553-612x612.jpg",
+      "courseName": "Aikido",
+      "instructorName": "Kenji Yamamoto",
+      "totalSeats": 10,
+      "availableSeats": 8,
+      "price": "119"
+    },
+    {
+      "image": "https://i.ibb.co/bHwRJTD/Karate-Vs-Wing-Chun.jpg",
+      "courseName": "Wing Chun",
+      "instructorName": "Jason Liu",
+      "totalSeats": 15,
+      "availableSeats": 15,
+      "price": "109"
+    },
+    {
+      "image": "https://i.ibb.co/Nt9tXqV/hapkido-9.jpg",
+      "courseName": "Hapkido",
+      "instructorName": "Jin Kim",
+      "totalSeats": 12,
+      "availableSeats": 5,
+      "price": "99"
+    }
+]

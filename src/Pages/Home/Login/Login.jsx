@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
 import { FaEye } from 'react-icons/fa';
+import SocialLogin from '../../../../SocialLogin/SocialLogin';
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
@@ -41,12 +42,12 @@ const Login = () => {
 
     return (
         <div className="hero min-h-screen">
-            <div className="md:flex justify-center items-center">
+            <div className="md:flex justify-center items-center gap-10 m-10">
                 <div className="md:w-1/2 w-full text-center lg:text-left">
                     <img src="https://i.ibb.co/tXRXLj0/login-page-4468581-3783954.webp" alt="" />
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm">
-                    <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+                    <form onSubmit={handleSubmit(onSubmit)} className="card">
                         <h1 className="text-2xl text-center font-bold">Please Login!</h1>
                         <div className="form-control">
                             <label className="label">
@@ -55,7 +56,7 @@ const Login = () => {
                             <input
                                 type="email"
                                 name="email"
-                                placeholder="email"
+                                placeholder="Email"
                                 {...register('email', { required: true })}
                                 className="input w-full input-bordered"
                             />
@@ -71,19 +72,20 @@ const Login = () => {
                                     name="password"
                                     placeholder="password"
                                     {...register('password', { required: true })}
-                                    className="input absolute input-bordered w-5/6"
+                                    className="input absolute input-bordered w-full"
                                 />
-                                <button className="relative ml-72 mt-4" onClick={togglePasswordVisibility}>
+                                <button className="relative ml-80 mt-4" onClick={togglePasswordVisibility}>
                                     <FaEye />
                                 </button>
                                 {errors.password?.type === 'required' && <p className="text-red-600 mt-2">Input Password</p>}
                             </div>
                         </div>
                         <div className="form-control mt-6">
-                            <input type="submit" className="btn btn-primary w-full" value="Login" />
+                            <input type="submit" className="btn btn-primary w-full text-white mt-5 mb-5" value="Login" />
                         </div>
                     </form>
                     <h1 className='text-center'>New here? <a className='text-orange-500'><Link to="/registration">Create a New Account</Link></a></h1>
+                    <SocialLogin></SocialLogin>
                 </div>
             </div>
         </div>
