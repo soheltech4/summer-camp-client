@@ -10,7 +10,7 @@ const Login = () => {
     const { LogIn } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
-    const [showPassword, setShowPassword] = useState(false); // State to manage password visibility
+    const [showPassword, setShowPassword] = useState(false);
 
     const from = location.state?.from?.pathname || '/';
 
@@ -45,8 +45,8 @@ const Login = () => {
                 <div className="md:w-1/2 w-full text-center lg:text-left">
                     <img src="https://i.ibb.co/tXRXLj0/login-page-4468581-3783954.webp" alt="" />
                 </div>
-                <form onSubmit={handleSubmit(onSubmit)} className="card flex-shrink-0 w-full max-w-sm">
-                    <div className="card-body">
+                <div className="card flex-shrink-0 w-full max-w-sm">
+                    <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                         <h1 className="text-2xl text-center font-bold">Please Login!</h1>
                         <div className="form-control">
                             <label className="label">
@@ -82,9 +82,9 @@ const Login = () => {
                         <div className="form-control mt-6">
                             <input type="submit" className="btn btn-primary w-full" value="Login" />
                         </div>
-                        <h1 className='text-center'>New here? <a className='text-orange-500'><Link to="/signup">Create a New Account</Link></a></h1>
-                    </div>
-                </form>
+                    </form>
+                    <h1 className='text-center'>New here? <a className='text-orange-500'><Link to="/registration">Create a New Account</Link></a></h1>
+                </div>
             </div>
         </div>
     );
