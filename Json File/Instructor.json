@@ -1,0 +1,82 @@
+ [
+      {
+        "image": "https://i.ibb.co/qyMphJJ/df1581-b0258c69c5264775a1a63b53b82a14ee-mv2.webp",
+        "name": "John Smith",
+        "email": "johnsmith@example.com",
+        "classesTaken": ["Karate", "Boxing", "Muay Thai"],
+        "numClassesTaken": 3,
+        "description": "John Smith is a skilled martial artist with expertise in Karate, Boxing, and Muay Thai. He has been teaching martial arts for over 10 years and focuses on developing strong fundamentals and discipline in his students."
+      },
+      {
+        "image": "https://i.ibb.co/3TXfg41/General-Miura.webp",
+        "name": "Jane Doe",
+        "email": "janedoe@example.com",
+        "classesTaken": ["Taekwondo", "Kickboxing"],
+        "numClassesTaken": 5,
+        "description": "Jane Doe is a dedicated martial artist specializing in Taekwondo and Kickboxing. She has won several championships in her career and is passionate about helping her students achieve their full potential."
+      },
+      {
+        "image": "https://i.ibb.co/LQfBKzz/varada-2.jpg",
+        "name": "David Johnson",
+        "email": "davidjohnson@example.com",
+        "classesTaken": ["Judo", "Brazilian Jiu-Jitsu"],
+        "numClassesTaken": 3,
+        "description": "David Johnson is a highly experienced martial artist proficient in Judo and Brazilian Jiu-Jitsu. He emphasizes technique and leverage in his teaching and believes in the importance of continuous learning and improvement."
+      },
+      {
+        "image": "https://i.ibb.co/mX0xNV2/GMLHeadshot.jpg",
+        "name": "Emily Wilson",
+        "email": "emilywilson@example.com",
+        "classesTaken": ["Muay Thai", "Krav Maga"],
+        "numClassesTaken": 5,
+        "description": "Emily Wilson is a versatile martial artist skilled in Muay Thai and Krav Maga. She brings a dynamic and energetic approach to her classes, focusing on practical self-defense techniques and overall fitness."
+      },
+      {
+        "image": "https://i.ibb.co/B2mJHYG/kyle-2.jpg",
+        "name": "Michael Anderson",
+        "email": "michaelanderson@example.com",
+        "classesTaken": ["Kung Fu", "Wing Chun"],
+        "numClassesTaken": 4,
+        "description": "Michael Anderson is a dedicated practitioner of Kung Fu and Wing Chun. With a deep understanding of traditional Chinese martial arts, he guides his students towards mastering intricate movements and developing inner strength."
+      },
+      {
+        "image": "https://i.ibb.co/rQn8BPr/images.jpg",
+        "name": "Lisa Chen",
+        "email": "lisachen@example.com",
+        "classesTaken": ["Karate", "Aikido"],
+        "numClassesTaken": 4,
+        "description": "Lisa Chen is a skilled martial artist trained in Karate and Aikido. With a focus on discipline and self-defense, she strives to create a supportive learning environment where students can develop confidence and improve their skills."
+      },
+      {
+        "image": "https://i.ibb.co/RvLNKff/hanshi.jpg",
+        "name": "Sarah Thompson",
+        "email": "sarahthompson@example.com",
+        "classesTaken": ["Kickboxing", "Boxing"],
+        "numClassesTaken": 0,
+        "description": "Sarah Thompson is a passionate martial artist specializing in Kickboxing and Boxing. Her energetic and motivating teaching style encourages students to push their limits and achieve their fitness goals while learning valuable self-defense techniques."
+      },
+      {
+        "image": "https://i.ibb.co/0CQ4yRJ/Markus-M-sm-e1659639519831-300x300.jpg",
+        "name": "Daniel Lee",
+        "email": "daniellee@example.com",
+        "classesTaken": ["Krav Maga", "Judo"],
+        "numClassesTaken": 3,
+        "description": "Daniel Lee is a certified instructor in Krav Maga and Judo. With a focus on practical self-defense and real-world scenarios, he equips his students with the skills and confidence necessary to protect themselves in any situation."
+      },
+      {
+        "image": "https://i.ibb.co/4jp99wM/martial1627621439.jpg",
+        "name": "Camila Oliveira",
+        "email": "camilaoliveira@example.com",
+        "classesTaken": ["Capoeira", "Brazilian Jiu-Jitsu"],
+        "numClassesTaken": 5,
+        "description": "Camila Oliveira is a talented martial artist proficient in Capoeira and Brazilian Jiu-Jitsu. Her classes are characterized by the fluidity of movements and the integration of music, creating a dynamic and engaging learning experience."
+      },
+      {
+        "image": "https://i.ibb.co/TBT0T0K/truej-nm.jpg",
+        "name": "Kenji Yamamoto",
+        "email": "kenjiyamamoto@example.com",
+        "classesTaken": ["Aikido", "Karate"],
+        "numClassesTaken": 1,
+        "description": "Kenji Yamamoto is a seasoned martial artist with expertise in Aikido and Karate. He believes in the philosophy of harmony and blending with an opponent's energy, teaching his students to cultivate balance and control in their techniques."
+      }
+]

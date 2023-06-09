@@ -5,12 +5,15 @@ const ClassesCard = ({ CData }) => {
     const {availableSeats, courseName, image, instructorName, price, _id, totalSeats } = CData
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
-            <figure><img src={image} alt="Shoes" /></figure>
+            <figure><img src={image} className='w-full h-48' alt="Shoes" /></figure>
             <div className="card-body">
-                <h2 className="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                <h2 className="card-title uppercase">{courseName}</h2>
+                <p className='text-xl font-semibold'>Instructor : {instructorName}</p>
+                <p className='text-xl'>Total Seats: {totalSeats}</p>
+                <p className='text-xl'>Available Seats: {availableSeats}</p>
+                <p className='text-xl'>Price: ${price}</p>
+                <div className="card-actions justify-center">
+                    <button className="btn btn-primary">Select</button>
                 </div>
             </div>
         </div>
