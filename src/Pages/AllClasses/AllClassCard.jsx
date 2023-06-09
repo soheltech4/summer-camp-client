@@ -1,8 +1,7 @@
 import React from 'react';
 
-const ClassesCard = ({ CData }) => {
-    console.log(CData)
-    const {availableSeats, courseName, image, instructorName, price, _id, totalSeats } = CData
+const AllClassCard = ({ cls }) => {
+    const { availableSeats, courseName, image, instructorName, price, _id, totalSeats } = cls
     return (
         <div className="card w-96 hover:bg-blue-100 shadow-xl">
             <figure><img src={image} className='w-full h-48' alt="Shoes" /></figure>
@@ -20,4 +19,4 @@ const ClassesCard = ({ CData }) => {
     );
 };
 
-export default ClassesCard;
+export default AllClassCard;
