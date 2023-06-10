@@ -14,18 +14,18 @@ const SocialLogin = () => {
             .then(result => {
                 const loggedGoogleUser = result.user
                 console.log(loggedGoogleUser)
-                // const saveUser = { name: loggedGoogleUser.displayName, email: loggedGoogleUser.email }
-                // fetch('http://localhost:5000/users', {
-                //     method: 'POST',
-                //     headers: {
-                //         'content-type': 'application/json'
-                //     },
-                //     body: JSON.stringify(saveUser)
-                // })
-                    // .then(res => res.json())
-                    // .then(()=> {
-                    //     
-                    // })
+                const saveUser = { name: loggedGoogleUser.displayName, email: loggedGoogleUser.email }
+                fetch('http://localhost:5000/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(saveUser)
+                })
+                    .then(res => res.json())
+                    .then(() => {
+
+                    })
                 navigate(from, { replace: true })
             })
             .then(error => {
@@ -35,7 +35,7 @@ const SocialLogin = () => {
     return (
         <div className='text-center justify-center mt-10'>
             <div className="divider">Or Sign In With</div>
-                <button onClick={handleSignWithGoogle} className="btn btn-primary text-white w-full"><FaGoogle></FaGoogle>
+            <button onClick={handleSignWithGoogle} className="btn btn-primary text-white w-full"><FaGoogle></FaGoogle>
                 Google</button>
         </div>
     );

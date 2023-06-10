@@ -16,29 +16,42 @@ const Registration = () => {
     const onSubmit = (data) => {
         if (data.password === data.matchPassword) {
             CreateUser(data.email, data.password)
-                .then((result) => {
-                    userUpdate(data.name, data.photo)
-                    const user = result.user;
-                    Swal.fire({
-                        title: 'Registration Successfully',
-                        showClass: {
-                            popup: 'animate__animated animate__fadeInDown',
-                        },
-                        hideClass: {
-                            popup: 'animate__animated animate__fadeOutUp',
-                        },
-                    });
-                    console.log(user);
-                    navigate(from, { replace: true });
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
+            .then(result => {
+                const user = result.user
+                console.log(user)
+                userUpdate(data?.name, data?.photo)
+                    .then(() => {
+                        const saveUser = { name: data?.name, email: data?.email }
+                        fetch('http://localhost:5000/users', {
+                            method: 'POST',
+                            headers: {
+                                'content-type': 'application/json'
+                            },
+                            body: JSON.stringify(saveUser)
+                        })
+                            .then(res => res.json())
+                            .then(data => {
+                                if (data.insertedId) {
+                                    reset()
+                                    Swal.fire({
+                                        title: 'Sign Up Successfully',
+                                        showClass: {
+                                            popup: 'animate__animated animate__fadeInDown'
+                                        },
+                                        hideClass: {
+                                            popup: 'animate__animated animate__fadeOutUp'
+                                        }
+                                    })
+                                    navigate(from, { replace: true })
+                                }
+                            })
+                    })
+                    .catch(error => console.log(error))
+            })
         }
         else {
             return setError("Password does not match")
         }
-
     };
 
 
@@ -84,7 +97,7 @@ const Registration = () => {
                                     <span className="label-text">Password</span>
                                 </label>
                                 <input
-                                    type="text"
+                                    type="password"
                                     placeholder="Password"
                                     name="password"
                                     {...register("password", {
@@ -101,7 +114,7 @@ const Registration = () => {
                                     <span className="label-text">Confirm Password</span>
                                 </label>
                                 <input
-                                    type="text"
+                                    type="password"
                                     name="matchPassword"
                                     placeholder="Password"
                                     {...register('matchPassword', { required: true })}
