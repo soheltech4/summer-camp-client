@@ -1,8 +1,10 @@
 import React from 'react';
-import { FaBook, FaCartPlus, FaHome, FaPersonBooth } from 'react-icons/fa';
+import { FaBook, FaCartPlus, FaHome, FaPersonBooth, FaWallet } from 'react-icons/fa';
 import { Link, Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
+
+    const isAdmin = true
     return (
         <div className="drawer lg:drawer-open">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -17,9 +19,22 @@ const Dashboard = () => {
                     <img src="https://i.ibb.co/XjY7ZKn/martial-master-logo.png" className='w-32' alt="" />
                 </div>
                 <ul className="menu p-4 w-80 h-full text-base-content">
-                    <li className='uppercase'><Link><FaHome></FaHome>Student Home</Link></li>
-                    <li className='uppercase'><Link to="/dashboard/myselectedclass"><FaCartPlus></FaCartPlus>My Selected Class</Link></li>
-                    <li className='uppercase'><Link><FaBook></FaBook>My Enrollment Class</Link></li>
+                    {
+                        isAdmin ?
+                            <>
+                                <li className='uppercase'><Link><FaHome></FaHome>Admin Home</Link></li>
+                                <li className='uppercase'><Link to="/dashboard/manageclasses"><FaCartPlus></FaCartPlus>Manage Classes</Link></li>
+                                <li className='uppercase'><Link to="/dashboard/allusers"><FaPersonBooth></FaPersonBooth> All Users</Link></li>
+                                <li className='uppercase'><Link><FaWallet></FaWallet> Payment History</Link></li>
+                            </>
+                            :
+                            <>
+                                <li className='uppercase'><Link><FaHome></FaHome>Student Home</Link></li>
+                                <li className='uppercase'><Link to="/dashboard/myselectedclass"><FaCartPlus></FaCartPlus>My Selected Class</Link></li>
+                                <li className='uppercase'><Link><FaBook></FaBook>My Enrollment Class</Link></li>
+                                <li className='uppercase'><Link><FaWallet></FaWallet> Payment History</Link></li>
+                            </>
+                    }
                     <div className="divider"></div>
                     <li className='uppercase'><Link to="/"><FaHome></FaHome>Home</Link></li>
                     <li className='uppercase'><Link to='/all-instructors'><FaPersonBooth></FaPersonBooth> Instructors</Link></li>
