@@ -27,7 +27,7 @@ const AllClassAdmin = () => {
                             refetch()
                             Swal.fire(
                                 'Deleted!',
-                                'Your file has been deleted.',
+                                'Your Class has been deleted.',
                                 'success'
                             )
                         }
@@ -70,8 +70,6 @@ const AllClassAdmin = () => {
                                             </div>
                                         </div>
                                     </td>
-                                    {/* Class Image, Class name, Instructor name, Instructor email, Available seats, 
-                                    Price, Status(pending/approved/denied) 3 buttons( Approve, Deny and send feedback). */}
                                     <td>{SData?.courseName}</td>
                                     <td>{SData?.instructorName}</td>
                                     <td>{SData?.instructorEmail}</td>
