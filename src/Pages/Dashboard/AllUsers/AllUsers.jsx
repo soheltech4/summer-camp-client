@@ -8,6 +8,12 @@ const AllUsers = () => {
         return res.json()
     })
     console.log(users)
+
+const handleMakeAdmin = (id) =>{
+    
+}
+
+
     return (
         <>
             <div className='flex justify-between mt-10 mb-10'>
@@ -21,15 +27,19 @@ const AllUsers = () => {
                                 <th>#</th>
                                 <th>User Name</th>
                                 <th>User Email</th>
+                                <th>Role</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {users.map((user, index) =>
-                                <tr key={user._id}>
+                            {users.map((student, index) =>
+                                <tr key={student._id}>
                                     <td>{index + 1}</td>
-                                    <td>{user?.name}</td>
-                                    <td>{user?.email}</td>
+                                    <td>{student?.name}</td>
+                                    <td>{student?.email}</td>
+                                    <td>{ student.role === 'admin' ? 'admin' : 
+                                    <button onClick={()=>handleMakeAdmin(student?._id)} className='bg-purple-600 p-3 rounded-md text-white'>Student</button>   
+                                    }</td>
                                     <td>
                                         <button className='bg-purple-600 p-3 rounded-md text-white'><FaTrashAlt></FaTrashAlt></button>
                                     </td>
