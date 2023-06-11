@@ -20,7 +20,7 @@ const AllClassCard = ({ cls }) => {
     const handleSelect = id => {
         console.log(id)
         if (user && user?.email ) {
-            const selectClass = {ClassId : id, availableSeats, courseName, image, instructorName, price, totalSeats, email: user?.email  }
+            const selectClass = {ClassId : id, availableSeats: parseFloat(availableSeats), courseName, image, instructorName, price, totalSeats, email: user?.email  }
             fetch('http://localhost:5000/select', {
                 method : "POST",
                 headers : {

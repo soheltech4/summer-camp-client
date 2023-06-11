@@ -67,8 +67,8 @@ const Dashboard = () => {
                                 (
                                     <>
                                         <li className='uppercase'><Link><FaHome></FaHome>Instructor Home</Link></li>
-                                        <li className='uppercase'><Link><FaHome></FaHome>Add A Class</Link></li>
-                                        <li className='uppercase'><Link><FaHome></FaHome>My Classes</Link></li>
+                                        <li className='uppercase'><Link to="/dashboard/addclass"><FaHome></FaHome>Add Class</Link></li>
+                                        <li className='uppercase'><Link to="/dashboard/myclasses"><FaHome></FaHome>My Classes</Link></li>
                                     </>
                                 )
                                 :

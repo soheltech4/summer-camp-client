@@ -12,6 +12,8 @@ import MySelectedClass from "../Pages/Dashboard/MySelectedClass";
 import PrivateRoute from "./PrivateRoute";
 import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 import AllClassAdmin from "../Pages/Dashboard/AllClassAdmin";
+import AddClass from "../Pages/Instructors/AddClass";
+import MyClasses from "../Pages/Instructors/MyClasses";
 
 const router = createBrowserRouter([
     {
@@ -55,6 +57,14 @@ const router = createBrowserRouter([
         {
           path : 'manageclasses',
           element : <AllClassAdmin></AllClassAdmin>
+        },
+        {
+          path : 'addclass',
+          element : <AddClass></AddClass>
+        },
+        {
+          path : 'myclasses',
+          element : <MyClasses></MyClasses>
         }
       ]
     }
