@@ -18,7 +18,7 @@ const Navbar = () => {
             <li><Link>Home</Link></li>
             <li><Link to="/all-instructors">Instructors</Link></li>
             <li><Link to="/all-classes">Classes</Link></li>
-            <Link to="/dashboard/myselectedclass">
+            <Link to="/dashboard">
                 <button className="btn">Dashboard
                     <div className="badge badge-secondary">+{select?.length}</div>
                 </button>

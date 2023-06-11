@@ -13,6 +13,7 @@ const AllUsers = () => {
   console.log(users);
 
   const [disabledAdminButtons, setDisabledAdminButtons] = useState([]);
+  const [disabledInsturctorButtons, setDisabledInstructorButtons] = useState([]);
 
   const handleMakeAdmin = (student) => {
     fetch(`http://localhost:5000/users/admin/${student?._id}`, {
@@ -51,10 +52,39 @@ const AllUsers = () => {
             showConfirmButton: false,
             timer: 1500
           });
+          setDisabledInstructorButtons([...disabledInsturctorButtons, student._id]);
         }
       });
   };
 
+  const handleDelete = student  => {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          fetch(`http://localhost:5000/users/${student?._id}`, {
+            method : "DELETE"
+          })
+          .then(res => res.json())
+          .then(data => {
+            if(data.deletedCount > 0){
+                refetch()
+                Swal.fire(
+                    'Deleted!',
+                    'Your file has been deleted.',
+                    'success'
+                  )
+            }
+          })
+        }
+      })
+}
   return (
     <>
       <div className='flex justify-between mt-10 mb-10'>
@@ -78,27 +108,28 @@ const AllUsers = () => {
                   <td>{index + 1}</td>
                   <td>{student?.name}</td>
                   <td>{student?.email}</td>
-                  <td>
+                  <td className=''>
                     <div className='grid grid-rows-2'>
                       <button
                         onClick={() => handleMakeAdmin(student)}
-                        className={`bg-purple-600 p-1 rounded-md text-white ${
-                          student.role === 'admin' || disabledAdminButtons.includes(student._id) ? 'disabled' : ''
-                        }`}
+                        className={`bg-purple-600 p-1 mb-1 rounded-md text-white ${student.role === 'admin' || disabledAdminButtons.includes(student._id) ? 'disabled' : ''
+                          }`}
                         disabled={student.role === 'admin' || disabledAdminButtons.includes(student._id)}
                       >
                         Make Admin
                       </button>
                       <button
                         onClick={() => handleMakeInstructor(student)}
-                        className={`bg-blue-600 p-1 rounded-md text-white`}
+                        className={`bg-blue-600 p-1 mb-1 rounded-md text-white ${student.role === 'instructor' || disabledInsturctorButtons.includes(student._id) ? 'disabled' : ''
+                          }`}
+                        disabled={student.role === 'instructor' || disabledInsturctorButtons.includes(student._id)}
                       >
                         Make Instructor
                       </button>
                     </div>
                   </td>
                   <td>
-                    <button className='bg-purple-600 p-3 rounded-md text-white'>
+                    <button onClick={()=>handleDelete(student)} className='bg-purple-600 p-3 rounded-md text-white'>
                       <FaTrashAlt />
                     </button>
                   </td>
