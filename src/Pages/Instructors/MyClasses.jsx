@@ -56,7 +56,7 @@ const MyClasses = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {MyAddedClasses.map((SData, index) =>
+                            {MyAddedClasses?.map((SData, index) =>
                                 <tr className='text-center'>
                                     <td>{index + 1}</td>
                                     <td className='text-center'>
@@ -76,7 +76,7 @@ const MyClasses = () => {
                                         : SData?.status === 'approved' ?
                                         <button className='bg-purple-600 p-1 rounded-md text-white'>Approved</button> 
                                         : 
-                                        <button className='bg-green-600 p-1 rounded-md text-white'>Denied</button>
+                                        <button className='bg-green-600 p-1 mb-1 rounded-md text-white'>Denied</button>
                                         }
                                     </td>
                                     <td >
@@ -85,8 +85,8 @@ const MyClasses = () => {
                                     <td>
                                         <button onClick={() => handleDelete(SData)} className='bg-purple-600 p-3 rounded-md text-white'><FaTrashAlt></FaTrashAlt></button>
                                     </td>
-                                </tr>)}
-
+                                </tr>
+                                )}
                         </tbody>
                     </table>
                 </div>
