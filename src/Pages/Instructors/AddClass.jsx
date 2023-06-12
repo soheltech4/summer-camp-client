@@ -15,7 +15,7 @@ const AddClass = () => {
             instructorName: data?.instructorName, price: parseFloat(data?.price),
             totalSeats: parseFloat(data?.totalSeats), email: user?.email, status: data?.status
         }
-        fetch('http://localhost:5000/classes', {
+        fetch('https://martial-mastery-server.vercel.app/classes', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -5,7 +5,7 @@ const UseClasses = () =>{
     const [loading, setLoading] = useState(true)
     console.log(classes)
     useEffect(()=>{
-        fetch('http://localhost:5000/classes')
+        fetch('https://martial-mastery-server.vercel.app/classes')
         .then(res => res.json())
         .then(data => {
             setClasses(data)

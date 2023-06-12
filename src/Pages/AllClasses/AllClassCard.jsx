@@ -21,7 +21,7 @@ const AllClassCard = ({ cls }) => {
         console.log(id)
         if (user && user?.email ) {
             const selectClass = {ClassId : id, availableSeats: parseFloat(availableSeats), courseName, image, instructorName, price, totalSeats, email: user?.email  }
-            fetch('http://localhost:5000/select', {
+            fetch('https://martial-mastery-server.vercel.app/select', {
                 method : "POST",
                 headers : {
                     'content-type' : 'application/json'

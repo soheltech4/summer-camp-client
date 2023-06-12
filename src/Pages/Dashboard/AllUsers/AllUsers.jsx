@@ -7,7 +7,7 @@ import './AllUsers.css'; // Import the CSS file for custom styling
 
 const AllUsers = () => {
   const { data: users = [], refetch } = useQuery(['users'], async () => {
-    const res = await fetch('http://localhost:5000/users');
+    const res = await fetch('https://martial-mastery-server.vercel.app/users');
     return res.json();
   });
   console.log(users);
@@ -16,7 +16,7 @@ const AllUsers = () => {
   const [disabledInsturctorButtons, setDisabledInstructorButtons] = useState([]);
 
   const handleMakeAdmin = (student) => {
-    fetch(`http://localhost:5000/users/admin/${student?._id}`, {
+    fetch(`https://martial-mastery-server.vercel.app/users/admin/${student?._id}`, {
       method: 'PATCH'
     })
       .then(res => res.json())
@@ -37,7 +37,7 @@ const AllUsers = () => {
   };
 
   const handleMakeInstructor = (student) => {
-    fetch(`http://localhost:5000/users/instructor/${student?._id}`, {
+    fetch(`https://martial-mastery-server.vercel.app/users/instructor/${student?._id}`, {
       method: 'PATCH'
     })
       .then(res => res.json())
@@ -68,7 +68,7 @@ const AllUsers = () => {
         confirmButtonText: 'Yes, delete it!'
       }).then((result) => {
         if (result.isConfirmed) {
-          fetch(`http://localhost:5000/users/${student?._id}`, {
+          fetch(`https://martial-mastery-server.vercel.app/users/${student?._id}`, {
             method : "DELETE"
           })
           .then(res => res.json())

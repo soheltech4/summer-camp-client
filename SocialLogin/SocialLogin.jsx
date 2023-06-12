@@ -15,7 +15,7 @@ const SocialLogin = () => {
                 const loggedGoogleUser = result.user
                 console.log(loggedGoogleUser)
                 const saveUser = { name: loggedGoogleUser.displayName, email: loggedGoogleUser.email }
-                fetch('http://localhost:5000/users', {
+                fetch('https://martial-mastery-server.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

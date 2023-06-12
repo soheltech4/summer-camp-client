@@ -4,7 +4,7 @@ const useAllInstructors = () =>{
     const [allInstructors, setAllInstructors] = useState([])
     const [loading, setLoading] = useState(true)
     useEffect(()=>{
-        fetch('http://localhost:5000/all-instructors')
+        fetch('https://martial-mastery-server.vercel.app/all-instructors')
         .then(res => res.json())
         .then(data => {
             setAllInstructors(data)
