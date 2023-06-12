@@ -1,6 +1,6 @@
 import React from 'react';
 import useSelectClass from '../../Hooks/useSelectClass';
-import { FaTrashAlt } from 'react-icons/fa';
+import { FaTrashAlt, FaWallet } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 
 const MySelectedClass = () => {
@@ -41,12 +41,11 @@ const MySelectedClass = () => {
             <div className='flex justify-between mt-10 mb-10'>
                 <h1 className='text-3xl uppercase font-semibold mr-36'>Total Class : {select?.length}</h1>
                 <h1 className='text-3xl uppercase font-semibold mr-36'>Total Amount : ${total}</h1>
-                <button className='btn'>PAY</button>
             </div>
             <div className='h-full w-full ml-20'>
                 <div className="overflow-x-auto">
                     <table className="table">
-                        <thead>
+                        <thead className='text-center'>
                             <tr className='uppercase'>
                                 <th>#</th>
                                 <th>Class</th>
@@ -54,12 +53,13 @@ const MySelectedClass = () => {
                                 <th>Instructor Name</th>
                                 <th>Available Seats</th>
                                 <th>Price</th>
+                                <th>Pay</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             {select.map((SData, index) =>
-                                <tr>
+                                <tr className='text-center'>
                                     <td>{index + 1}</td>
                                     <td>
                                         <div className="flex items-center space-x-3">
@@ -74,6 +74,9 @@ const MySelectedClass = () => {
                                     <td>{SData?.instructorName}</td>
                                     <td>{SData?.availableSeats}</td>
                                     <td>${SData?.price}</td>
+                                    <td>
+                                        <button className='bg-blue-600 p-3 rounded-md text-white'><FaWallet></FaWallet></button>
+                                    </td>
                                     <td>
                                         <button onClick={()=>handleDelete(SData)} className='bg-purple-600 p-3 rounded-md text-white'><FaTrashAlt></FaTrashAlt></button>
                                     </td>
